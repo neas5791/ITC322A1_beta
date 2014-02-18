@@ -30,7 +30,7 @@ public class SavingsAccount extends BaseAccount{
 	@Override
 	public boolean deposit(double cash) {
 		if (cash >= 0){ // checks for positive value
-			setBalance(cash);
+			modifyBalance(cash);
 			return true;
 		}
 		System.out.println("You must enter a positive value!");
@@ -48,7 +48,7 @@ public class SavingsAccount extends BaseAccount{
 		// checks for positive value and the account 
 		// has enough money to make the withdrawal
 		if ( (cash >= 0 ) && getBalance() >= cash){ 
-			setBalance(-cash);
+			modifyBalance(-cash);
 			return true;
 		}
 		if (cash < 0)
@@ -67,7 +67,7 @@ public class SavingsAccount extends BaseAccount{
 	**/
 	public boolean addInterest(double rate){
 		if (rate >= 0){
-			setBalance(getBalance()*(rate/100));
+			modifyBalance(getBalance()*(rate/100));
 			return true;
 		}
 		return false;

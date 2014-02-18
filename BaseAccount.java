@@ -68,7 +68,7 @@ public abstract class BaseAccount implements Comparable<BaseAccount> {
 	}
 
 	/**
-	 * This method is a getter for the string content of owner attribute 
+	 * Getter for the string instance variable representing owner name  
 	 * @return	String content of owner 
 	 */
 	public String getOwner(){
@@ -76,7 +76,7 @@ public abstract class BaseAccount implements Comparable<BaseAccount> {
 	}
 
 	/**
-	 * This method is a getter for the string content of Account number
+	 * Getter for the string instance variable representing Account number
 	 * @return 	String content of Account Number
 	 */
 	public String getId(){
@@ -84,7 +84,7 @@ public abstract class BaseAccount implements Comparable<BaseAccount> {
 	}
 
 	/**
-	 * This method is a getter for the double value of balance
+	 * Getter for the double instance variable representing balance
 	 * @return	double value of balance
 	 */
 	public double getBalance(){
@@ -92,12 +92,12 @@ public abstract class BaseAccount implements Comparable<BaseAccount> {
 	}
 
 	/**
-	 * This method allow the value of balance to be adjusted by 
-	 * given cash amount
+	 * Modifies the current balance by amount passed in by 
+	 * cash parameter
 	 * @param cash	This is the cash amount the balance
 	 * 				will be adjusted by.
 	 */
-	protected void setBalance(double cash){
+	protected void modifyBalance(double cash){
 			balance += cash;
 	}
 

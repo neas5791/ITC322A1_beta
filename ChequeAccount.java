@@ -45,7 +45,7 @@ public class ChequeAccount extends BaseAccount {
 		double totalDepositAmount = cash - transactionFee;
 		
 		if (totalDepositAmount >= 0){ // checks for positive value
-			setBalance(totalDepositAmount);
+			modifyBalance(totalDepositAmount);
 			return true;
 		}
 		System.out.println("You must enter a positive value!");
@@ -63,7 +63,7 @@ public class ChequeAccount extends BaseAccount {
 			// checks thats funds are available by adding the credit limit and the current balance
 			// and comparing against the sum of the withdrawal amount and the transaction fee
 			if ( getBalance() + getCreditLimit() >= (totalWithdrawalAmount) ) {
-				setBalance(-totalWithdrawalAmount);
+				modifyBalance(-totalWithdrawalAmount);
 				return true;
 			}
 		}

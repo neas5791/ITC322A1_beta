@@ -21,7 +21,7 @@ public class TestAccount {
 		}
 		
 		for (BaseAccount b : list){
-			b.setBalance(r.nextInt(50-25)+25);
+			b.modifyBalance(r.nextInt(50-25)+25);
 			System.out.printf("%s\t%.2f\t%s\n",b.getId(),b.getBalance(),b.getOwner());
 		}
 		
