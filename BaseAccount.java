@@ -108,9 +108,10 @@ public abstract class BaseAccount implements Comparable<BaseAccount> {
 	}
 
 	/**
-	 * This is a required implementation method for the Comparable interface
-	 * All objects in this class will be compared based on the String value contained in
-	 * the owner attribute. 
+	 * Comparable interface required method
+	 * 
+	 * Objects of BaseAccount type are compared based on the string value 
+	 * in instance variable owner. 
 	 */
 	public int compareTo(BaseAccount obj){
 		// Compares this object with the specified object for order. 
@@ -121,12 +122,10 @@ public abstract class BaseAccount implements Comparable<BaseAccount> {
 	}
 	
 	/**
-	 * Compare this BaseAccount to antoher object for equality.
+	 * Overrides the Object inherited method, uses the interface implements compareTo method to 
+	 * evaluate object equality.
 	 * @param	obj - an object with which this BaseAccount is compared
 	 * @return	A return 
-	 * This method overrides the Object inherited method
-	 * equality is based on the result of the implemented 
-	 * compareTo(BaseAccount obj) method
 	 */
 	public boolean equals(Object obj){
 		// Check that obj actually refers to a BaseAccount object
@@ -142,16 +141,15 @@ public abstract class BaseAccount implements Comparable<BaseAccount> {
 	/**
 	 * All derived classes must define this method
 	 *     
-	 * @param cash	This is the amount of cash
-	 * 				for depositing into the account
-	 * @return		if successful returns true, is
-	 * 				unsuccessful returns false
+	 * @param	cash	This is the amount of cash for depositing into the account
+	 * @return	Successful transactions return true, unsuccessful transactions returns false
 	 */
 	abstract public boolean deposit(double cash);
 	
 	/**
 	 * All derived classes must override this object inherited method toString()
-	 * returns a string representation of the objects state.
+	 * @returns 	String representation of the objects state.
 	 */
 	abstract public String toString();
 }
+
