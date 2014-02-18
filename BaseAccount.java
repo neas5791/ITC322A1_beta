@@ -92,19 +92,16 @@ public abstract class BaseAccount implements Comparable<BaseAccount> {
 	}
 
 	/**
-	 * Modifies the current balance by amount passed in by 
-	 * cash parameter
-	 * @param cash	This is the cash amount the balance
-	 * 				will be adjusted by.
+	 * Modifies the current balance by amount passed in by cash parameter
+	 * @param cash	This is the cash amount the balance will be adjusted by.
 	 */
 	protected void modifyBalance(double cash){
 			balance += cash;
 	}
 
 	/**
-	 * This method allows for changes to the owner name by given string
-	 * @param owner	This is the string value for
-	 * 				the account owners name
+	 * Setter for the string instance variable representing owner name
+	 * @param	owner	This is the string value for the account owners name
 	 */
 	protected void setOwner(String owner){
 		this.owner = owner;
